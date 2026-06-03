@@ -1,4 +1,3 @@
-# app/services/discount_calculator.rb
 class DiscountCalculator
   PROMO_CODES = {
     'SAVE10' => 0.10,
@@ -19,7 +18,8 @@ class DiscountCalculator
       end
     end
 
-    if user && user.created_at < 30.days.ago
+    thirty_days_ago = Time.now - (30 * 24 * 60 * 60)
+    if user && user.created_at < thirty_days_ago
       total = total * 0.95
     end
 
