@@ -1,0 +1,5 @@
+{
+  "name": "Ruby Interview",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.3",
+  "postCreateCommand": "ruby --version"
+}
